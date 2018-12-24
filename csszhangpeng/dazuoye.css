@@ -335,69 +335,67 @@ ul,li,ol{
 	text-align:center;
 	color:#9a9791;
 }
-
-#container {
-    position: relative;
-    width: 800px;
-    height: 420px;
-    overflow: hidden;
+*{
+	padding:0px;
+	margin:0px;
 }
-#list {
-    position: absolute;
-    z-index: 1;
-    width: 6400px;
-    height: 420px;
+.box{
+	width: 800px;
+	height: 418px;
+	border: 1px solid red;
+	margin: 0px auto;
+	position: relative;
+	overflow: hidden;
 }
-#list img {
-    float: left;
-    width: 800px;
-    height: 420px;
+.slider{
+	width:6400px;
+	position: absolute;
+	left: -800px;
 }
-#buttons {
-    position: absolute;
-    left: 250px;
-    bottom: 20px;
-    z-index: 2;
-    height: 10px;
-    width: 200px;
+.slide{
+	width: 800px;
+	overflow: hidden;
+	float: left;
 }
-#buttons span {
-    float: left;
-    margin-right: 10px;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    background: #333;
-    cursor: pointer;
+.box>span{
+	display: block;
+	width: 30px;
+	height: 50px;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	top: 175px;
+	line-height: 50px;
+	background: rgb(255,0,0);
+	font-size: 30px;
+	position: absolute;
+	/* display: none; */
+	opacity: 0;
 }
-#buttons.on {
-    background-color:red;
+#left{
+	left: 30px;
+	display:none;
 }
-.arrow {
-    position: absolute;
-    top: 180px;
-    z-index: 2;
-    display: none;
-    width: 40px;
-    height: 40px;
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 39px;
-    text-align: center;
-    color: #fff;
-    background-color: RGBA(0, 0, 0, .3);
-    cursor: pointer;
+#right{
+	right: 30px;
+	display:none;
 }
-.arrow:hover {
-    background-color: RGBA(0, 0, 0, .7);
+.nav1{
+	position: absolute;
+	left: 500px;
+	bottom: 20px;
 }
-#container:hover .arrow {
-    display: block;
+.nav1>li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-left:10px;
+	background: #ccc;
+	cursor: pointer;
+	margin: 0 10px;
+	border-radius: 50%;
+	text-align:center;
 }
-#prev {
-    left: 20px;
-}
-#next {
-    right: 20px;
+.nav1 .active{
+	background: red;
 }
